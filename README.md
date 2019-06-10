@@ -1,3 +1,3 @@
 # practica-im-Kalay
-práctica
-proyecto práctica para aprender. Si bien el diseño no es mio pero el código si.
+
+página que simula una web de una diseñadora

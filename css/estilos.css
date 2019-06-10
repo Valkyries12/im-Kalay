@@ -463,6 +463,9 @@ footer {
     }
 }
 
+/********PANTALLAS DESDE 1024 HASTA 1440
+*******************************************************/
+
 @media (min-width: 1024px) and (max-width: 1440px) {
     section.home div {
         width: 95%;

@@ -59,7 +59,6 @@ button:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 1px solid green;
     text-align: center;
     padding: 10px;
     line-height: 1.5;
@@ -123,7 +122,6 @@ section.home {
 
 section.home div {
     width: 85%;
-    border: 1px solid red;
     grid-column: 2/3;
     grid-row: 2/3;
 }
@@ -135,7 +133,6 @@ section.home div p {
     font-weight: 500;
     letter-spacing: .8px;
     width: 100%;
-    border: 1px solid red;
     font-size: 16.5px;
 }
 
@@ -153,7 +150,6 @@ section.services div.container {
     justify-items: space-around;
     align-items: center;
     margin: 0 auto;
-    border: 1px  solid blue;
 }
 
 section.services div.centrado p {
@@ -166,7 +162,6 @@ section.services div.container div {
     letter-spacing: 1px;
     height: 320px;
     line-height: 1.5;
-    border: 1px solid red;
     background-color: #fff;
     display: flex;
     justify-content: center;
@@ -207,20 +202,48 @@ section.services div.container div i {
 
 section.about {
     width: 100%;
-    height: 100vh;
+    display: flex;
+}
+
+section.about article {
+    display: flex;
 }
 
 section div.about-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     padding: 60px;
     margin-top: 50px;
     width: 100%;
     margin: 0 auto;
 }
 
+section div.about-container div {
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+    justify-items: space-between;
+}
+
+section div.about-container div:last-of-type {
+    grid-column: 2/4;
+    width: 90%;
+    
+}
+
 section div.about-container img {
     height: 350px;
     border-radius: 6px;
+}
+
+section div.about-container .social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-self: center;
+    margin-top: 5%;
 }
 
 section div.about-container div:last-of-type h2,
@@ -232,6 +255,7 @@ section div.about-container div:last-of-type p {
 section div.about-container div:last-of-type p {
     color: #878787;
     font-weight: 400;
+    margin-bottom: 2%;
 }
 
 /*============== SECTION .WORK ==============*/
@@ -457,7 +481,6 @@ footer {
         font-weight: 300;
         letter-spacing: .8px;
         width: 100%;
-        border: 1px solid red;
         font-size: 1rem;
     }
 
@@ -482,9 +505,37 @@ footer {
     section.services div.container div:first-child {
         margin-top: 20%;
     }
+    /***/
 
 
+    section div.about-container {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    section div.about-container div {
+        width: 90%;
+        margin: 0 auto;
+    }
 
+    
+    section div.about-container div:nth-child(2) {
+        margin-bottom: 5%;
+    }
+
+    section div.about-container div:last-of-type p {
+        margin-bottom: 10%;
+    }
+
+    section div.about-container div:last-of-type p:last-child {
+        margin-bottom: 35%;
+    }
+    
+    section div.about-container img {
+        height: 250px;
+        border-radius: 6px;
+    }
 }
 
 /*****TABLETS DESDE 768PX
@@ -534,13 +585,37 @@ footer {
     section.services div.container div:nth-of-type(3) {
         grid-column: 1/2;
         grid-row: 2/3;
-        
     }
 
     section.services div.container div:nth-of-type(4) {
         grid-column: 2/3;
         grid-row: 2/3;
-        
+    }
+
+
+    section div.about-container {
+        display: flex;
+        flex-direction: column;
+        padding: 5%;
+    }
+
+    section div.about-container div:first-child {
+        margin-left: 0;
+    }
+
+    section div.about-container div:last-child {
+        margin-left: 0;
+        margin-bottom: 10%;
+    }
+
+    section div.about-container div:last-child h2 {
+        margin-top: 0;
+    }
+
+    section div.about-container div.social {
+        width: 60%;
+        margin-right: auto;
+        margin-left: auto;
     }
 }
 
@@ -560,4 +635,10 @@ footer {
     section.services div.container {
         width: 90%;
     }
+
+    section.about div.about-container div:first-child {
+        width: 100%;
+    }
+
+
 }

@@ -150,6 +150,7 @@ section.services div.container {
     justify-items: space-around;
     align-items: center;
     margin: 0 auto;
+    max-width: 1440px;
 }
 
 section.services div.centrado p {
@@ -207,6 +208,7 @@ section.about {
 
 section.about article {
     display: flex;
+    width: 100%;
 }
 
 section div.about-container {
@@ -214,6 +216,7 @@ section div.about-container {
     grid-template-columns: 1fr 1fr 1fr;
     padding: 60px;
     margin-top: 50px;
+    max-width: 1440px;
     width: 100%;
     margin: 0 auto;
 }
@@ -234,8 +237,9 @@ section div.about-container div:last-of-type {
 }
 
 section div.about-container img {
-    height: 350px;
+    height: 300px;
     border-radius: 6px;
+    max-width: 400px;
 }
 
 section div.about-container .social {
@@ -248,7 +252,6 @@ section div.about-container .social {
 
 section div.about-container div:last-of-type h2,
 section div.about-container div:last-of-type p {
-    margin-left: 40px;
     line-height: 1.5;
 }
 
@@ -270,7 +273,7 @@ section.work p {
 }
 
 section.work div.three-img {
-    max-width: 1400px;
+    max-width: 1440px;
     width: 85%;
     display: flex;
     margin: 0 auto;
@@ -333,20 +336,21 @@ section.work div.bg-3 {
 
 section.contact {
     width: 100%;
-    height: 100vh;
+    max-width: 1440px;
+    margin: 0 auto;
     display: flex;
+    padding: 5%;
 }
 
 section.contact div:first-of-type {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    padding: 40px;
+    width: 50%;
+    display: grid;
 }
 
 section.contact div:first-of-type p {
     color: #898989;
     margin-bottom: 50px;
+    line-height: 1.5;
 }
 
 section.contact div:first-of-type button {
@@ -362,10 +366,13 @@ section.contact input {
     border: none;
     margin-bottom: 20px;
     padding: 1px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #c9c7c7;
 }
 
 section.contact textarea {
     border: none;
+    border-bottom: 1px solid #c9c7c7;
 }
 
 section.contact input:focus,
@@ -375,7 +382,7 @@ section.contact textarea:focus {
 }
 
 section.contact div:last-of-type {
-    width: 60%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     padding: 40px;
@@ -553,6 +560,29 @@ footer {
     section.work div.bg-image:last-child {
         margin-bottom: 40%;
     }
+
+    section.contact {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        padding: 5%;
+    }
+
+    section.contact div:first-of-type,
+    section.contact div:last-of-type {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 50px;
+        padding-left: 0;
+    }
+
+    section.contact div:first-of-type button {
+        width: 90%;
+        margin: 15% auto;
+    }
 }
 
 /*****TABLETS DESDE 768PX
@@ -631,8 +661,6 @@ footer {
 
     section div.about-container div.social {
         width: 60%;
-        margin-right: auto;
-        margin-left: auto;
     }
 
     section.work div.three-img {
@@ -667,7 +695,20 @@ footer {
         grid-row: 2/3;
     }
 
-    
+    section.contact {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    section.contact div:first-of-type,
+    section.contact div:last-of-type {
+        width: 100%;
+    }
+
+    section.contact div:first-of-type button {
+        width: 30%;
+        margin-left: 70%;
+    }
 }
 
 /********PANTALLAS DESDE 1024 HASTA 1440

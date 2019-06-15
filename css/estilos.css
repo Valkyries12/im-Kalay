@@ -421,6 +421,12 @@ footer {
     justify-content: center;
 }
 
+footer p {
+    line-height: 1.5;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .social-footer {
     display: flex;
     justify-content: space-around;
